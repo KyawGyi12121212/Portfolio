@@ -1,14 +1,245 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Mark Thant gg gg</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyaw Linn Thant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h2>Projects</h2>
-<p>FOT Respiratory Sensor Device</p>
-<p>Project 2 — coming soon</p>
+<!-- NAV -->
+<nav>
+  <span class="nav-name">KLT<span class="nav-dot">.</span></span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  </body>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Biomedical Engineering · UTS</p>
+    <h1>Kyaw Linn Thant</h1>
+    <p class="hero-tagline">I build medical hardware — sensors, PCBs, and firmware.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">See my work</a>
+      <a href="#contact" class="btn-ghost">Contact</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="container">
+    <div class="about-flex">
+      <div class="about-left">
+        <p class="section-label">01 — About</p>
+        <h2>Early-career engineer with a hardware focus.</h2>
+      </div>
+      <div class="about-right">
+        <p>Fourth-year Biomedical Engineering student at UTS. I work across the full hardware stack — sensor selection, PCB layout, firmware, and signal processing.</p>
+        <p>Right now I'm finishing a capstone with the Respiratory Investigation Unit at Royal North Shore Hospital, building a device to measure lung mechanics during ventilation.</p>
+      </div>
+    </div>
+
+    <!-- SKILLS as expandable -->
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title">Hardware &amp; PCB</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>PCB design in EasyEDA Pro · schematic capture · layout &amp; routing · Gerber export · JLCPCB fabrication · sensor selection · analog signal chain design · connector selection.</p>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title">Firmware &amp; Embedded</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Arduino / C++ · hardware timer interrupts · direct register manipulation · phase-locked DAC output · simultaneous ADC sampling · serial protocols.</p>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title">CAD &amp; Mechanical</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>SolidWorks · part modelling · tubing junctions · enclosure design · FDM 3D printing · tolerancing for print shrinkage.</p>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span class="acc-title">Software &amp; Signal Processing</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Python · Flask web dashboards · FFT · lock-in / phase-sensitive detection · impedance spectroscopy · LTSpice circuit simulation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <div class="container">
+    <p class="section-label">02 — Selected Work</p>
+    <h2 class="projects-heading">Things I've built.</h2>
+
+    <!-- PROJECT CARD 1 -->
+    <article class="pcard">
+      <div class="pcard-media">
+        <div class="pcard-img-placeholder">
+          <span>HERO IMAGE</span>
+          <p>FOT device photo goes here</p>
+        </div>
+      </div>
+      <div class="pcard-content">
+        <div class="pcard-tags">
+          <span class="tag tag-active">● In progress</span>
+          <span class="tag">Capstone</span>
+          <span class="tag">RNSH</span>
+        </div>
+        <h3>FOT Respiratory Sensor Device</h3>
+        <p class="pcard-desc">A device that measures lung impedance during non-invasive ventilation using forced oscillation — to help titrate ventilator pressure for COPD patients.</p>
+        <button class="expand-btn" data-target="proj1">
+          <span class="expand-text">View details</span>
+          <span class="expand-icon">↓</span>
+        </button>
+        <div class="expand-panel" id="proj1">
+          <div class="expand-inner">
+            <div class="spec-row">
+              <span class="spec-key">My role</span>
+              <span class="spec-val">PCB design · firmware · SolidWorks CAD · sensor selection &amp; analog-vs-ADC analysis · Flask dashboard</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Sensors</span>
+              <span class="spec-val">Dual Honeywell HSC — airway pressure (±10 inH₂O) + flow (±2 inH₂O), analog</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">PCB</span>
+              <span class="spec-val">2-layer FR-4, 26×40 mm · JST-XH connector · 0 DRC errors · ordered from JLCPCB</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Firmware</span>
+              <span class="spec-val">Arduino Uno R4 · hardware-timer ISR · phase-locked DAC + dual ADC at 420 Hz</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Highlight</span>
+              <span class="spec-val">Rejected an on-board I²C ADC — sequential reads would corrupt the phase measurement. Analog simultaneous sampling keeps both channels coherent.</span>
+            </div>
+            <div class="mini-gallery">
+              <div class="mini-img"><span>PCB</span></div>
+              <div class="mini-img"><span>CAD</span></div>
+              <div class="mini-img"><span>Build</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- UPCOMING -->
+    <div class="soon-row">
+      <div class="soon-card">
+        <span class="soon-label">Coming soon</span>
+        <h4>Project 03</h4>
+      </div>
+      <div class="soon-card">
+        <span class="soon-label">Coming soon</span>
+        <h4>Project 04</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="container">
+    <p class="section-label">03 — Contact</p>
+    <h2>Let's talk.</h2>
+    <p class="contact-sub">Open to medical device roles, internships, and research in hardware, sensing, and embedded systems.</p>
+    <div class="contact-cards">
+      <a href="mailto:kyawlinnthant55@gmail.com" class="contact-card">
+        <span class="cc-label">Email</span>
+        <span class="cc-value">kyawlinnthant55@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/kyaw-linn-thant-ba398a247/" target="_blank" class="contact-card">
+        <span class="cc-label">LinkedIn</span>
+        <span class="cc-value">/in/kyaw-linn-thant</span>
+      </a>
+      <a href="https://github.com/KyawGyi12121212" target="_blank" class="contact-card">
+        <span class="cc-label">GitHub</span>
+        <span class="cc-value">@KyawGyi12121212</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span>Kyaw Linn Thant</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+// Accordion (skills)
+document.querySelectorAll('.acc-head').forEach(head => {
+  head.addEventListener('click', () => {
+    const item = head.parentElement;
+    item.classList.toggle('open');
+  });
+});
+
+// Expandable project panels
+document.querySelectorAll('.expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = document.getElementById(btn.dataset.target);
+    const isOpen = panel.classList.toggle('open');
+    btn.classList.toggle('active', isOpen);
+    btn.querySelector('.expand-text').textContent = isOpen ? 'Hide details' : 'View details';
+  });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Nav active state
+const secs = document.querySelectorAll('section[id], header[id]');
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  document.querySelectorAll('section[id]').forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+  });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+});
+</script>
+
+</body>
 </html>
