@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflection — Kyaw Linn Thant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-name" style="text-decoration:none;color:inherit">KLT<span class="nav-dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#projects">Work</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="reflection.html" class="active">Reflection</a></li>
+    <li><a href="letter.html">Letter</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <p class="section-label">Internship Reflection</p>
+    <h1>Reflection.</h1>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="container">
+
+  <p class="qn">What were your expectations about your internship before you joined?</p>
+
+  <p>I expected to be given defined tasks inside a project someone else was directing. My
+  picture of a twelve-week internship was that I would support an existing build, learn the
+  tools the team already used, and hand work back to an engineer who would decide whether it
+  was right. I assumed the significant design decisions would already have been made, and
+  that my job was to execute against them carefully.</p>
+
+  <p>I also assumed the clinical side of the project would sit with someone else. I thought
+  the requirements would arrive already translated into engineering terms, and that my
+  contact with the hospital would be limited to seeing the device used at the end, if at
+  all.</p>
+
+  <p class="qn">What was the reality? How was it different from your expectations?</p>
+
+  <p>I was made team lead on the hardware build, and the project was further from finished
+  than I expected. The Forced Oscillation Technique attachment had been worked on before I
+  arrived without a working unit coming out of it, so there was material to read but no
+  device to improve. That inverted what I had assumed. Instead of executing decisions, I was
+  making them, starting with which sensors to use and how to acquire from them.</p>
+
+  <p>The clinical contact was also direct rather than filtered. I worked with staff at the
+  Respiratory Investigation Unit at Royal North Shore Hospital and the Woolcock Institute,
+  and the requirements arrived as clinical problems rather than specifications. The device
+  needed to help titrate ventilator pressure for COPD patients, and turning that into an
+  oscillation frequency, a pressure amplitude and an acceptable measurement error was part
+  of my work, not something handed to me.</p>
+
+  <p>The other difference was pace, and specifically the way hardware removes the option of
+  iterating your way out of a problem. Board fabrication takes time, so a schematic has to
+  be committed before there is any physical board to test it on. A mistake caught after
+  ordering costs a week or more. That forced a discipline I had not needed at university,
+  where a wrong answer can be corrected the same afternoon.</p>
+
+  <p class="qn">What lessons were the most important from your internship? Why were they
+  important?</p>
+
+  <p>The most important technical lesson was to specify the measurement before selecting
+  the parts. The device derives respiratory impedance from the phase relationship between
+  airway pressure and flow, which means the two channels have to be captured at the same
+  instant. The straightforward option, and the one used in the reference material available
+  to me, was an on-board I²C ADC. That converter reads its input channels in sequence rather
+  than together, so it puts a small timing offset between the pressure and flow samples. In
+  most applications that offset is irrelevant. In this one it lands directly on the quantity
+  the device exists to measure, because a skew between the channels appears as a phase error
+  and therefore as an impedance error.</p>
+
+  <p>I moved the front end to analog simultaneous sampling instead, with the DAC output and
+  dual ADC acquisition phase-locked to a hardware timer interrupt at 420 Hz, and selected
+  dual Honeywell HSC sensors for airway pressure and flow. The decision was not difficult
+  once the measurement was written down properly. It was only difficult while I was thinking
+  about the converter as a component choice rather than as part of the measurement. That is
+  the lesson I took: work out what the instrument has to resolve first, then choose hardware
+  that serves it, rather than accepting a reference design because it is the well-trodden
+  path.</p>
+
+  <p>The second lesson came from the clinicians, and it changed how I understood the point
+  of the work. Talking to the respiratory staff made it clear that a measurement is only
+  valuable if it answers a question someone is actually asking at the bedside. It is
+  possible to build a device that measures something accurately and is still useless,
+  because the number it produces does not inform a decision. That reframed the project for
+  me. The specification was not a technical target I had been set; it was a clinical need I
+  had to understand well enough to represent in hardware.</p>
+
+  <p>Both lessons point the same way. Engineering judgement is mostly about understanding
+  the problem precisely enough that the technical choice becomes obvious, and the work of
+  getting to that understanding is not separate from the engineering. It is the
+  engineering.</p>
+
+  <p class="qn">After your workplace experience, what would you say your value proposition
+  would be to an employer? How can you demonstrate this?</p>
+
+  <p>I can take a clinical measurement requirement and turn it into working hardware, and I
+  can talk to the clinicians while doing it.</p>
+
+  <p>The evidence for the first half is the prototype. I delivered a working unit on a
+  project that had not produced one before, and I built it across the full stack rather than
+  one layer of it: sensor selection, a 2-layer FR-4 board of 26 by 40 mm taken from
+  schematic capture through routing to Gerber export and passed design rule check with zero
+  errors, firmware on an Arduino Uno R4 using a hardware-timer ISR for phase-locked
+  acquisition, SolidWorks models for the tubing junctions and enclosure toleranced for print
+  shrinkage, and a Flask dashboard with FFT and phase-sensitive detection to recover the
+  impedance. The ADC decision is the clearest single example of engineering judgement in
+  that work, because it shows the measurement driving the architecture rather than the
+  other way around.</p>
+
+  <p>The evidence for the second half is that the specification came out of conversations
+  with the Respiratory Investigation Unit and the Woolcock Institute rather than out of a
+  document. I taught myself PCB design during the build, which is also worth stating
+  plainly: the useful thing is not that I already knew EasyEDA, but that I could get to a
+  fabricable board inside a twelve-week window while the rest of the project continued.</p>
+
+  <p class="qn">How did your internship influence the type of role in which you are
+  interested?</p>
+
+  <p>It pushed me towards medical device engineering on the hardware side, and away from
+  roles that sit further from the instrument. What I found satisfying was the part where a
+  design decision has a physical consequence you can measure, and where being wrong shows up
+  in the data rather than in an opinion. Working on a device intended for COPD patients also
+  made the clinical proximity matter to me more than I expected it to.</p>
+
+  <p>Concretely, I am looking for a graduate role in device development, sensing or embedded
+  systems in a medical context, ideally somewhere the engineering team has contact with the
+  clinicians using the product. I would also take a role in test, verification or field
+  support in the same domain, because both put you close to how devices behave in real use,
+  and that is the knowledge I most want to build next.</p>
+
+  <div class="page-nav">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="letter.html">Cover letter</a>
+  </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>Kyaw Linn Thant</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

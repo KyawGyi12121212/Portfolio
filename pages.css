@@ -1,0 +1,43 @@
+/* ===== SUBPAGE HEADER ===== */
+.page-header { padding: 9rem 0 2.5rem; }
+.page-header h1 { font-size: clamp(2.2rem, 5vw, 3rem); margin-bottom: 0; }
+
+/* ===== DOC LAYOUT ===== */
+main.doc { padding: 1rem 0 5rem; }
+main.doc .container { max-width: 700px; }
+.doc p { color: var(--text-muted); font-size: 1rem; line-height: 1.85; margin-bottom: 1.3rem; }
+.doc strong { color: var(--text); font-weight: 600; }
+
+/* question labels (reflection.html) */
+.doc .qn {
+  color: var(--text); font-weight: 600; font-size: 1.05rem;
+  letter-spacing: -0.01em; margin-top: 2.75rem; margin-bottom: 0.9rem;
+}
+.doc .qn:first-child { margin-top: 0; }
+
+/* selection-criteria blocks (letter.html) */
+.crit {
+  border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+  padding: 2rem; margin-bottom: 2rem;
+}
+.crit h3 { color: var(--text); font-size: 1.15rem; margin-bottom: 0.4rem; }
+.crit p:last-child { margin-bottom: 0; }
+.star-key {
+  display: block; font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted);
+  letter-spacing: 0.12em; text-transform: uppercase; margin: 1.1rem 0 0.4rem;
+}
+.crit h3 + .star-key { margin-top: 1.25rem; }
+
+/* draft markers — removed before publish, kept here only in case one slips through */
+.draft { border: 1px dashed #E8555555; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; color: #ff8a8a; }
+
+/* bottom page-to-page nav */
+.page-nav {
+  display: flex; gap: 1.5rem; margin-top: 1rem; padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.page-nav a {
+  font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted);
+  letter-spacing: 0.04em; text-decoration: none; transition: color 0.2s;
+}
+.page-nav a:hover { color: var(--accent); }
