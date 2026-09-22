@@ -3,16 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume — Kyaw Linn Thant</title>
+<title>Resume | Kyaw Linn Thant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="pages.css">
+<style>
+/* ===== RESUME ===== */
+.page-sub {
+  color: var(--text-muted); max-width: 60ch; margin-top: 1rem;
+  font-size: 1.05rem; line-height: 1.7;
+}
+.doc h2 {
+  color: var(--text); font-size: 1.45rem; letter-spacing: -0.01em;
+  margin: 3.25rem 0 1.1rem; padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.doc h2:first-child { margin-top: 0; }
+.doc h3 { color: var(--text); font-size: 1.05rem; font-weight: 600; margin: 1.75rem 0 0.2rem; }
+.doc .meta-line {
+  font-family: var(--mono); font-size: 0.78rem; color: var(--text-dim);
+  letter-spacing: 0.02em; line-height: 1.6; margin-bottom: 0.8rem;
+}
+.doc ul { margin: 0.4rem 0 1.2rem; padding-left: 1.2rem; }
+.doc li { color: var(--text-muted); line-height: 1.75; margin-bottom: 0.55rem; }
+.kv { border-top: 1px solid var(--border); margin-top: 0.8rem; }
+.kv-row { display: grid; gap: 0.25rem 1.4rem; padding: 0.85rem 0; border-bottom: 1px solid var(--border); }
+@media (min-width: 640px) { .kv-row { grid-template-columns: 160px 1fr; } }
+.kv-key { font-family: var(--mono); font-size: 0.78rem; color: var(--text-dim); padding-top: 0.15rem; }
+.kv-val { color: var(--text-muted); line-height: 1.65; }
+</style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-name" style="text-decoration:none;color:inherit">KLT<span class="nav-dot">.</span></a>
   <ul class="nav-links">
@@ -28,17 +52,61 @@
 <header class="page-header">
   <div class="container">
     <p class="section-label">Resume</p>
-    <h1>Resume.</h1>
+    <h1>Kyaw Linn Thant</h1>
+    <p class="page-sub">Biomedical engineering, medical hardware and respiratory measurement. Sydney, available from December 2026.</p>
   </div>
 </header>
 
 <main class="doc">
   <div class="container">
 
-  <p>The full resume is being finalised and will be posted here shortly. In the meantime,
-  get in touch directly and I'll send a copy.</p>
+  <h2>Education</h2>
+  <h3>Bachelor of Engineering (Honours), Biomedical Engineering</h3>
+  <p class="meta-line">University of Technology Sydney · graduating December 2026</p>
+  <ul>
+    <li>Weighted Average Mark of 84.</li>
+    <li>Relevant study includes Biomedical Instrumentation, covering data acquisition architectures, measurement principles, op-amp circuit configurations and biosignal chains.</li>
+  </ul>
 
-  <p><a href="mailto:kyawlinnthant55@gmail.com">kyawlinnthant55@gmail.com</a></p>
+  <h2>Engineering experience</h2>
+  <h3>Biomedical Engineering Team Lead, Optik Consultancy</h3>
+  <p class="meta-line">12-week internship · client: Respiratory Investigation Unit, Royal North Shore Hospital, and the Woolcock Institute of Medical Research</p>
+  <ul>
+    <li>Led the biomedical engineering work on a Forced Oscillation Technique attachment for CPAP and BiPAP machines within a seven-person multidisciplinary team, delivering the first working prototype in the project's history.</li>
+    <li>Specified the analog front end, rejecting an on-board multiplexed ADC because sequential channel reads would corrupt the phase measurement, and using simultaneous sampling to keep the pressure and flow channels coherent.</li>
+    <li>Taught myself PCB design and produced a 2-layer FR-4 board of 26 × 40 mm from schematic capture through routing to Gerber export, passing design rule check with zero errors and fabricating through JLCPCB.</li>
+    <li>Selected dual Honeywell HSC sensors for airway pressure at ±10 inH₂O and flow at ±2 inH₂O, and designed the analog conditioning around them.</li>
+    <li>Wrote Arduino Uno R4 firmware using a hardware-timer interrupt to drive a phase-locked DAC output and dual ADC acquisition at 420 Hz.</li>
+    <li>Modelled tubing junctions and enclosure components in SolidWorks, tolerancing for FDM print shrinkage, and refitted printed parts as requirements changed.</li>
+    <li>Built a Flask dashboard for live acquisition, recovering respiratory impedance using FFT and phase-sensitive detection.</li>
+    <li>Took ownership of final assembly sealing and leak testing, tracing and resealing leaks until the pneumatic path held, so the measurements given to the clinical team could be trusted.</li>
+    <li>Led the clinical research for the team, translating COPD therapy requirements into sensing and sampling specifications and reporting progress to clinicians at Royal North Shore Hospital and the Woolcock Institute.</li>
+  </ul>
+
+  <h2>Other experience</h2>
+  <h3>Customer-facing and hospitality roles</h3>
+  <p class="meta-line">Song's Hotel · Crown Tower Sydney · Starbucks · McDonald's · part-time, concurrent with full-time study</p>
+  <ul>
+    <li>Sustained part-time work across independent café operations and high-volume venues throughout the degree.</li>
+    <li>Daily communication with customers and colleagues under time pressure, in teams where handover accuracy mattered.</li>
+  </ul>
+
+  <h3>Resident Networker, UTS Housing</h3>
+  <ul>
+    <li>Supported residents and ran activities that built community across a student housing cohort.</li>
+  </ul>
+
+  <h2>Technical skills</h2>
+  <div class="kv">
+    <div class="kv-row"><span class="kv-key">Hardware &amp; PCB</span><span class="kv-val">EasyEDA Pro schematic capture, layout and routing, Gerber export, JLCPCB fabrication. Sensor selection, analog signal chain design.</span></div>
+    <div class="kv-row"><span class="kv-key">Firmware</span><span class="kv-val">Arduino and C++, hardware timer interrupts, direct register manipulation, phase-locked DAC output, simultaneous ADC sampling.</span></div>
+    <div class="kv-row"><span class="kv-key">CAD &amp; mechanical</span><span class="kv-val">SolidWorks part modelling, enclosure design, FDM 3D printing, tolerancing for print shrinkage, leak testing.</span></div>
+    <div class="kv-row"><span class="kv-key">Signal processing</span><span class="kv-val">Python, Flask dashboards, FFT, phase-sensitive detection, impedance measurement, LTSpice simulation.</span></div>
+    <div class="kv-row"><span class="kv-key">Professional</span><span class="kv-val">Clinical stakeholder communication, technical leadership in a multidisciplinary team, design documentation and handover.</span></div>
+  </div>
+
+  <h2>Referees</h2>
+  <p>Available on request.</p>
 
   <div class="page-nav">
     <a href="index.html">Home</a>
