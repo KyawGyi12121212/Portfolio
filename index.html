@@ -32,7 +32,6 @@
       <li><a href="#work">Work</a></li>
       <li><a href="#capability">Skills</a></li>
       <li><a href="resume.html">Resume</a></li>
-      <li><a href="reflection.html">Reflection</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="theme-btn" type="button" aria-label="Switch light or dark theme">
@@ -120,8 +119,10 @@
         <div class="fig-frame cover"><span class="corner">FIG 2.1</span><img src="images/sensor.jpg" alt="FOT sensor PCB mounted in its 3D-printed housing" loading="lazy" width="1200" height="900"></div>
         <figcaption><b>FOT sensor.</b> Custom 2-layer PCB with dual Honeywell HSC sensors in a 3D-printed housing.</figcaption>
         <div class="thumbs">
+          <a href="images/fot-system.png" target="_blank" rel="noopener" class="fig-frame" style="background:#fff;grid-column:span 2;aspect-ratio:16/9" aria-label="Open system diagram full size"><img style="padding:2%" src="images/fot-system.png" alt="System diagram: CPAP machine, speaker T-junction, flowhead with flow sensor, pressure sensor at the mask, microcontroller and PC" loading="lazy"></a>
           <div class="fig-frame cover"><img src="images/cad.jpg" alt="Speaker and equaliser tube test set-up" loading="lazy"></div>
         </div>
+        <figcaption><b>FIG 2.1b.</b> System layout (click to enlarge): a speaker adds a 5 Hz oscillation to the CPAP airflow, and flow and pressure are sensed right at the mask.</figcaption>
       </figure>
       <div>
         <div class="project-meta"><span class="chip">Optik Consultancy</span><span class="chip">RNSH · Woolcock</span></div>
@@ -135,12 +136,16 @@
         <details class="spec">
           <summary><span class="plus" aria-hidden="true">+</span> Full spec</summary>
           <div class="spec-rows">
-            <div class="spec-row"><span class="spec-key">My role</span><span class="spec-val">Team lead · PCB design · firmware · SolidWorks CAD · sensor selection · Flask dashboard</span></div>
-            <div class="spec-row"><span class="spec-key">Sensors</span><span class="spec-val">Dual Honeywell HSC: airway pressure (±10 inH₂O) and flow (±2 inH₂O), analog</span></div>
-            <div class="spec-row"><span class="spec-key">PCB</span><span class="spec-val">2-layer FR-4, 26 × 40 mm · JST-XH connector · 0 DRC errors · made by JLCPCB</span></div>
-            <div class="spec-row"><span class="spec-key">Firmware</span><span class="spec-val">Arduino Uno R4 · hardware-timer ISR · phase-locked DAC + dual ADC at 420 Hz</span></div>
-            <div class="spec-row"><span class="spec-key">Key call</span><span class="spec-val">Rejected an on-board I²C ADC because sequential reads would corrupt the phase measurement. Simultaneous analog sampling keeps both channels in step.</span></div>
+            <div class="spec-row"><span class="spec-key">Problem</span><span class="spec-val">No commercial system measures lung mechanics during non-invasive ventilation, so clinicians set CPAP pressure without live data.</span></div>
+            <div class="spec-row"><span class="spec-key">How it works</span><span class="spec-val">A speaker adds a gentle 5 Hz oscillation to the airflow from a ResMed Lumis 150 CPAP machine. Pressure and flow are measured at the mask, and impedance (Z = P/Q) gives the lungs’ resistance and reactance.</span></div>
+            <div class="spec-row"><span class="spec-key">My role</span><span class="spec-val">Sensor sub-team in a seven-person team: sensor selection, PCB design, analog front end, firmware, SolidWorks parts, Flask dashboard, final sealing and leak testing</span></div>
+            <div class="spec-row"><span class="spec-key">Sensors</span><span class="spec-val">Dual Honeywell HSC analog sensors: airway pressure (±10 inH₂O) and differential pressure across a pneumotach for flow (±2 inH₂O)</span></div>
+            <div class="spec-row"><span class="spec-key">Trade-offs</span><span class="spec-val">Rejected the Sensirion SDP3x (thermal sensor, too fragile in humid breath) and the I²C options, Amphenol DLVR and digital HSC (sequential reads skew the phase). Left out RC filters because unmatched phase lag would distort the reactance reading.</span></div>
+            <div class="spec-row"><span class="spec-key">Firmware</span><span class="spec-val">Arduino Uno R4. A 70-point sine table makes the 5 Hz tone, and sampling at 420 Hz gives exactly one table cycle per oscillation, so every sample stays phase-locked to the signal.</span></div>
+            <div class="spec-row"><span class="spec-key">PCB</span><span class="spec-val">2-layer FR-4, 26 × 40 mm · JST-XH connectors · 0 DRC errors · made by JLCPCB, after a breadboard-first prototype</span></div>
             <div class="spec-row"><span class="spec-key">Quality</span><span class="spec-val">Sealed and leak-tested the full pneumatic path, and documented test results and limits for handover.</span></div>
+            <div class="spec-row"><span class="spec-key">Status</span><span class="spec-val">Working proof of concept, not a clinical device. Calibration against a 3 L syringe and a reference load is the next step.</span></div>
+            <div class="spec-row"><span class="spec-key">Lessons</span><span class="spec-val">Freeze the interfaces between sub-teams early and treat them as controlled documents. Write the system test plan alongside the design, not at the end.</span></div>
           </div>
         </details>
       </div>
