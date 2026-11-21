@@ -167,15 +167,68 @@ testable.</p>
       </div>
     </article>
 
+    <!-- PROJECT CARD 2 -->
+    <article class="pcard">
+      <div class="pcard-media">
+        <img src="images/pcr-device.png" alt="M&amp;M PCR device: PocketPCR in a vented case beside the Glowscope enclosure" class="pcard-img" style="background:#eef1f5;object-fit:contain;padding:1rem">
+      </div>
+      <div class="pcard-content">
+        <div class="pcard-tags">
+          <span class="tag tag-done">● Completed</span>
+          <span class="tag">Studio B</span>
+          <span class="tag">Team of 4</span>
+        </div>
+        <h3>M&amp;M Pocket PCR Device</h3>
+        <p class="pcard-desc">A low-cost tabletop PCR system that lets aged-care staff with no lab training test for MRSA on site, instead of waiting 1–3 days for an external lab.</p>
+        <button class="expand-btn" data-target="proj2">
+          <span class="expand-text">View details</span>
+          <span class="expand-icon">↓</span>
+        </button>
+        <div class="expand-panel" id="proj2">
+          <div class="expand-inner">
+            <div class="spec-row">
+              <span class="spec-key">Project</span>
+              <span class="spec-val">Adapted the open-source GaudiLabs PocketPCR and the Glowscope into one system that detects the MRSA mecA gene, with a vented case, a faster fan and a 3D-printed viewing enclosure.</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">My role</span>
+              <span class="spec-val">Firmware and user interface (C++ / Arduino on an Adafruit Feather M0)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">What I built</span>
+              <span class="spec-val">A preset system: five saved, nameable PCR programs on a single knob. Switching tests went from re-entering up to 11 values to 3 knob presses. Presets have their own flash storage, so they survive power-off and never overwrite the original settings.</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Safety</span>
+              <span class="spec-val">Left all heater, PID and thermistor code byte-identical to the original, and confirmed it with a direct file comparison, so the UI changes could not affect temperature control.</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Testing</span>
+              <span class="spec-val">Built an Arduino Uno test rig in the Wokwi simulator and found and fixed two bugs before touching the real device. Then ran a full heating cycle on the hardware. All changes tracked in Git.</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Results</span>
+              <span class="spec-val">Team runtime cut from 640 s to 355 s. All 11 users with no PCR experience ran the device on their own and correctly identified positive and negative samples, rating the interface 5/5. About $190 in materials per unit.</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-key">Next steps</span>
+              <span class="spec-val">TGA IVD classification, and quality and risk documentation to ISO 13485, ISO 14971 and ISO 20916.</span>
+            </div>
+            <div class="mini-gallery">
+              <div class="mini-img"><img src="images/pcr-device.png" alt="Assembled device" style="background:#eef1f5;object-fit:contain;padding:0.4rem"></div>
+              <div class="mini-img"><img src="images/pcr-cad.png" alt="CAD model of the Glowscope enclosure" style="background:#eef1f5;object-fit:contain;padding:0.4rem"></div>
+              <div class="mini-img"><img src="images/pcr-ui.jpg" alt="Preset interface screens running in the Wokwi simulator"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- UPCOMING -->
     <div class="soon-row">
       <div class="soon-card">
         <span class="soon-label">Coming soon</span>
         <h4>Project 03</h4>
-      </div>
-      <div class="soon-card">
-        <span class="soon-label">Coming soon</span>
-        <h4>Project 04</h4>
       </div>
     </div>
   </div>
