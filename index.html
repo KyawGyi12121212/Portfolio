@@ -1,313 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kyaw Linn Thant</title>
+<title>Kyaw Linn Thant | Biomedical Engineer</title>
+<meta name="description" content="Kyaw Linn Thant: biomedical engineer in Sydney. Medical device hardware, firmware and quality (ISO 13485, ISO 14971).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  document.documentElement.classList.remove('no-js');
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-name" style="text-decoration:none;color:inherit">KLT<span class="nav-dot">.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="reflection.html">Reflection</a></li>
-    <li><a href="letter.html">Letter</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<div class="doc-strip" aria-hidden="true">
+  <div class="container">
+    <span>KLT-PF-001 · Rev D</span>
+    <span class="hide-sm">Biomedical engineering portfolio</span>
+    <span class="status">Open to quality &amp; engineering roles</span>
+  </div>
+</div>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">KL</span><span class="brand-text">Kyaw Linn Thant</span></a>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#capability">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="reflection.html">Reflection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-btn" type="button" aria-label="Switch light or dark theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17" /><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+    </button>
+  </div>
 </nav>
 
+<main>
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Biomedical Engineering · UTS</p>
-    <h1>Kyaw Linn Thant</h1>
-    <p class="hero-tagline">I build and test medical hardware, and I care about getting the quality right.</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn-primary">See my work</a>
-      <a href="#contact" class="btn-ghost">Contact</a>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <p class="label"><span class="num">0.0</span>Biomedical Engineer · Sydney</p>
+        <h1><span class="line">Kyaw Linn</span><span class="line"><em>Thant</em></span></h1>
+        <p class="hero-lede">I build medical hardware, then test it until I can trust what it measures.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-solid">See the work <span class="arr" aria-hidden="true">→</span></a>
+          <a href="resume.html" class="btn btn-line">Resume</a>
+        </div>
+      </div>
+
+      <aside class="spec-sheet" aria-label="Summary">
+        <div class="spec-sheet-head"><span>Spec sheet</span><span>Rev D</span></div>
+        <dl>
+          <dt>Degree</dt><dd>B.Eng (Hons) Biomedical, UTS<small>WAM 84 · graduating Dec 2026</small></dd>
+          <dt>Now</dt><dd>Laboratory Assistant, Microbiology<small>4Cyte Pathology</small></dd>
+          <dt>Focus</dt><dd>Medical device quality &amp; hardware<small>ISO 13485 · ISO 14971 · TGA</small></dd>
+          <dt>Built</dt><dd>2 working device prototypes<small>Respiratory sensor · Pocket PCR</small></dd>
+        </dl>
+      </aside>
     </div>
-  </div>
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+
+    <div class="trace" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <line class="grid-line" x1="0" y1="60" x2="1200" y2="60"/>
+        <line class="grid-line" x1="300" y1="0" x2="300" y2="120"/>
+        <line class="grid-line" x1="600" y1="0" x2="600" y2="120"/>
+        <line class="grid-line" x1="900" y1="0" x2="900" y2="120"/>
+        <path class="wave" d="M0 60 C 50 10, 100 10, 150 60 S 250 110, 300 60 S 400 10, 450 60 S 550 110, 600 60 S 700 10, 750 60 S 850 110, 900 60 S 1000 10, 1050 60 S 1150 110, 1200 60"/>
+        <path class="wave-2" d="M0 60 C 60 30, 110 30, 170 60 S 280 90, 340 60 S 450 30, 510 60 S 620 90, 680 60 S 790 30, 850 60 S 960 90, 1020 60 S 1130 30, 1200 60"/>
+      </svg>
+      <span class="trace-cap">Ch1 pressure · Ch2 flow · phase-locked</span>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="metric-val">84</div><div class="metric-lbl">Weighted average mark, Biomedical Engineering at UTS</div></div>
+      <div class="metric"><div class="metric-val">11<sup>/11</sup></div><div class="metric-lbl">First-time users ran the Pocket PCR on their own and read the result correctly</div></div>
+      <div class="metric"><div class="metric-val">0</div><div class="metric-lbl">Design rule check errors on my first PCB</div></div>
+      <div class="metric"><div class="metric-val">−45<sup>%</sup></div><div class="metric-lbl">PCR run time, 640 s down to 355 s (team result)</div></div>
+    </div>
   </div>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="reveal">
+<!-- 1.0 PROFILE -->
+<section id="profile" class="section reveal">
   <div class="container">
-    <div class="about-flex">
-      <div class="about-left">
-        <p class="section-label">01 — About</p>
-        <h2>Early-career engineer with a hardware and quality focus.</h2>
-      </div>
-      <div class="about-right">
-        <p>Fourth-year Biomedical Engineering student at UTS. I work across the full hardware stack — sensor selection, PCB layout, firmware, and signal processing.</p>
+    <div class="section-head">
+      <p class="label"><span class="num">1.0</span>Profile</p>
+      <h2>An engineer who cares <em>how well</em> it works, not just that it works.</h2>
+    </div>
+    <div class="profile-body">
+      <p class="pull">“The measurement is only as good as the circuit underneath it.”</p>
+      <div class="prose">
+        <p>Final-year Biomedical Engineering student at UTS. I work across the full hardware stack: sensor selection, PCB layout, firmware and signal processing.</p>
         <p>I also work as a Laboratory Assistant in the Microbiology department at 4Cyte Pathology, where I follow SOPs every day and keep every specimen labelled, recorded and traceable. At UTS I studied medical device regulation, ISO 13485 quality systems and ISO 14971 risk management.</p>
-        <p>Right now I'm finishing a capstone with the Respiratory Investigation Unit at Royal North Shore Hospital, building a device to measure lung mechanics during ventilation.</p>
-        <p>What keeps me on the hardware side is that the measurement is only as good as the
-circuit underneath it. A respiratory device either resolves the thing a clinician needs
-to see or it does not, and that comes down to sensor choice, timing and signal chain
-rather than anything downstream. I like problems where the answer is physical and
-testable.</p>
-      </div>
-    </div>
-
-    <!-- SKILLS as expandable -->
-    <div class="accordion">
-      <div class="acc-item">
-        <button class="acc-head">
-          <span class="acc-title">Quality &amp; Regulatory</span>
-          <span class="acc-icon">+</span>
-        </button>
-        <div class="acc-body">
-          <p>ISO 13485 quality systems · ISO 14971 risk management (FMEA, RPN) · TGA device classification · working to SOPs and work instructions · inspection and leak testing · traceability and accurate records.</p>
-        </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-head">
-          <span class="acc-title">Hardware &amp; PCB</span>
-          <span class="acc-icon">+</span>
-        </button>
-        <div class="acc-body">
-          <p>PCB design in EasyEDA Pro · schematic capture · layout &amp; routing · Gerber export · JLCPCB fabrication · sensor selection · analog signal chain design · connector selection.</p>
-        </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-head">
-          <span class="acc-title">Firmware &amp; Embedded</span>
-          <span class="acc-icon">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Arduino / C++ · hardware timer interrupts · direct register manipulation · phase-locked DAC output · simultaneous ADC sampling · serial protocols.</p>
-        </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-head">
-          <span class="acc-title">CAD &amp; Mechanical</span>
-          <span class="acc-icon">+</span>
-        </button>
-        <div class="acc-body">
-          <p>SolidWorks · part modelling · tubing junctions · enclosure design · FDM 3D printing · tolerancing for print shrinkage.</p>
-        </div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-head">
-          <span class="acc-title">Software &amp; Signal Processing</span>
-          <span class="acc-icon">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Python · Flask web dashboards · FFT · lock-in / phase-sensitive detection · impedance spectroscopy · LTSpice circuit simulation.</p>
-        </div>
+        <p>I like problems where the answer is physical and testable. A device either resolves the thing a clinician needs to see or it does not, and that comes down to sensor choice, timing and the signal chain. Proving it with a test, not a hunch, is the part I enjoy most.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="reveal">
+<!-- 2.0 WORK -->
+<section id="work" class="section reveal">
   <div class="container">
-    <p class="section-label">02 — Selected Work</p>
-    <h2 class="projects-heading">Things I've built.</h2>
+    <div class="section-head">
+      <p class="label"><span class="num">2.0</span>Selected work</p>
+      <h2>Things I’ve built <em>and tested.</em></h2>
+    </div>
 
-    <!-- PROJECT CARD 1 -->
-    <article class="pcard">
-      <div class="pcard-media">
-        <img src="images/sensor.jpg" alt="FOT sensor PCB mounted in 3D-printed housing" class="pcard-img">
-      </div>
-      <div class="pcard-content">
-        <div class="pcard-tags">
-          <span class="tag tag-active">● In progress</span>
-          <span class="tag">Capstone</span>
-          <span class="tag">RNSH</span>
+    <!-- 2.1 FOT -->
+    <article class="project">
+      <figure class="project-fig">
+        <div class="fig-frame cover"><span class="corner">FIG 2.1</span><img src="images/sensor.jpg" alt="FOT sensor PCB mounted in its 3D-printed housing" loading="lazy" width="1200" height="900"></div>
+        <figcaption><b>FOT sensor.</b> Custom 2-layer PCB with dual Honeywell HSC sensors in a 3D-printed housing.</figcaption>
+        <div class="thumbs">
+          <div class="fig-frame cover"><img src="images/cad.jpg" alt="Speaker and equaliser tube test set-up" loading="lazy"></div>
         </div>
-        <h3>FOT Respiratory Sensor Device</h3>
-        <p class="pcard-desc">A device that measures lung impedance during non-invasive ventilation using forced oscillation — to help titrate ventilator pressure for COPD patients.</p>
-        <button class="expand-btn" data-target="proj1">
-          <span class="expand-text">View details</span>
-          <span class="expand-icon">↓</span>
-        </button>
-        <div class="expand-panel" id="proj1">
-          <div class="expand-inner">
-            <div class="spec-row">
-              <span class="spec-key">My role</span>
-              <span class="spec-val">PCB design · firmware · SolidWorks CAD · sensor selection &amp; analog-vs-ADC analysis · Flask dashboard</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Sensors</span>
-              <span class="spec-val">Dual Honeywell HSC — airway pressure (±10 inH₂O) + flow (±2 inH₂O), analog</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">PCB</span>
-              <span class="spec-val">2-layer FR-4, 26×40 mm · JST-XH connector · 0 DRC errors · ordered from JLCPCB</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Firmware</span>
-              <span class="spec-val">Arduino Uno R4 · hardware-timer ISR · phase-locked DAC + dual ADC at 420 Hz</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Highlight</span>
-              <span class="spec-val">Rejected an on-board I²C ADC — sequential reads would corrupt the phase measurement. Analog simultaneous sampling keeps both channels coherent.</span>
-            </div>
-            <div class="mini-gallery">
-              <div class="mini-img"><img src="images/sensor.jpg" alt="Sensor PCB and housing"></div>
-              <div class="mini-img"><img src="images/cad.jpg" alt="Speaker and equalizer tube setup"></div>
-              <div class="mini-img"><span>Build</span></div>
-            </div>
+      </figure>
+      <div>
+        <div class="project-meta"><span class="chip">Optik Consultancy</span><span class="chip">RNSH · Woolcock</span></div>
+        <h3>Forced Oscillation Respiratory Sensor</h3>
+        <p class="project-desc">A device that measures lung impedance during non-invasive ventilation, to help clinicians set ventilator pressure for COPD patients. I led the hardware build and delivered the first working prototype in the project’s history.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-val">420 Hz</div><div class="kpi-lbl">phase-locked dual sampling</div></div>
+          <div class="kpi"><div class="kpi-val">0 DRC</div><div class="kpi-lbl">errors, 26 × 40 mm board</div></div>
+          <div class="kpi"><div class="kpi-val">Airtight</div><div class="kpi-lbl">leak-tested before handover</div></div>
+        </div>
+        <details class="spec">
+          <summary><span class="plus" aria-hidden="true">+</span> Full spec</summary>
+          <div class="spec-rows">
+            <div class="spec-row"><span class="spec-key">My role</span><span class="spec-val">Team lead · PCB design · firmware · SolidWorks CAD · sensor selection · Flask dashboard</span></div>
+            <div class="spec-row"><span class="spec-key">Sensors</span><span class="spec-val">Dual Honeywell HSC: airway pressure (±10 inH₂O) and flow (±2 inH₂O), analog</span></div>
+            <div class="spec-row"><span class="spec-key">PCB</span><span class="spec-val">2-layer FR-4, 26 × 40 mm · JST-XH connector · 0 DRC errors · made by JLCPCB</span></div>
+            <div class="spec-row"><span class="spec-key">Firmware</span><span class="spec-val">Arduino Uno R4 · hardware-timer ISR · phase-locked DAC + dual ADC at 420 Hz</span></div>
+            <div class="spec-row"><span class="spec-key">Key call</span><span class="spec-val">Rejected an on-board I²C ADC because sequential reads would corrupt the phase measurement. Simultaneous analog sampling keeps both channels in step.</span></div>
+            <div class="spec-row"><span class="spec-key">Quality</span><span class="spec-val">Sealed and leak-tested the full pneumatic path, and documented test results and limits for handover.</span></div>
           </div>
-        </div>
+        </details>
       </div>
     </article>
 
-    <!-- PROJECT CARD 2 -->
-    <article class="pcard">
-      <div class="pcard-media">
-        <img src="images/pcr-device.png" alt="M&amp;M PCR device: PocketPCR in a vented case beside the Glowscope enclosure" class="pcard-img" style="background:#eef1f5;object-fit:contain;padding:1rem">
-      </div>
-      <div class="pcard-content">
-        <div class="pcard-tags">
-          <span class="tag tag-done">● Completed</span>
-          <span class="tag">Studio B</span>
-          <span class="tag">Team of 4</span>
+    <!-- 2.2 PCR -->
+    <article class="project flip">
+      <figure class="project-fig">
+        <div class="fig-frame"><span class="corner">FIG 2.2</span><img src="images/pcr-device.png" alt="M&amp;M PCR device: PocketPCR in a vented case beside the Glowscope enclosure" loading="lazy" width="1200" height="720"></div>
+        <figcaption><b>M&amp;M Pocket PCR.</b> PocketPCR in a vented case, docked to the 3D-printed Glowscope.</figcaption>
+        <div class="thumbs">
+          <div class="fig-frame"><img src="images/pcr-cad.png" alt="CAD model of the Glowscope enclosure" loading="lazy"></div>
+          <div class="fig-frame cover"><img src="images/pcr-ui.jpg" alt="Preset menu screens running in the Wokwi simulator" loading="lazy"></div>
         </div>
+      </figure>
+      <div>
+        <div class="project-meta"><span class="chip">UTS Studio B</span><span class="chip">Team of 4</span></div>
         <h3>M&amp;M Pocket PCR Device</h3>
-        <p class="pcard-desc">A low-cost tabletop PCR system that lets aged-care staff with no lab training test for MRSA on site, instead of waiting 1–3 days for an external lab.</p>
-        <button class="expand-btn" data-target="proj2">
-          <span class="expand-text">View details</span>
-          <span class="expand-icon">↓</span>
-        </button>
-        <div class="expand-panel" id="proj2">
-          <div class="expand-inner">
-            <div class="spec-row">
-              <span class="spec-key">Project</span>
-              <span class="spec-val">Adapted the open-source GaudiLabs PocketPCR and the Glowscope into one system that detects the MRSA mecA gene, with a vented case, a faster fan and a 3D-printed viewing enclosure.</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">My role</span>
-              <span class="spec-val">Firmware and user interface (C++ / Arduino on an Adafruit Feather M0)</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">What I built</span>
-              <span class="spec-val">A preset system: five saved, nameable PCR programs on a single knob. Switching tests went from re-entering up to 11 values to 3 knob presses. Presets have their own flash storage, so they survive power-off and never overwrite the original settings.</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Safety</span>
-              <span class="spec-val">Left all heater, PID and thermistor code byte-identical to the original, and confirmed it with a direct file comparison, so the UI changes could not affect temperature control.</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Testing</span>
-              <span class="spec-val">Built an Arduino Uno test rig in the Wokwi simulator and found and fixed two bugs before touching the real device. Then ran a full heating cycle on the hardware. All changes tracked in Git.</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Results</span>
-              <span class="spec-val">Team runtime cut from 640 s to 355 s. All 11 users with no PCR experience ran the device on their own and correctly identified positive and negative samples, rating the interface 5/5. About $190 in materials per unit.</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Next steps</span>
-              <span class="spec-val">TGA IVD classification, and quality and risk documentation to ISO 13485, ISO 14971 and ISO 20916.</span>
-            </div>
-            <div class="mini-gallery">
-              <div class="mini-img"><img src="images/pcr-device.png" alt="Assembled device" style="background:#eef1f5;object-fit:contain;padding:0.4rem"></div>
-              <div class="mini-img"><img src="images/pcr-cad.png" alt="CAD model of the Glowscope enclosure" style="background:#eef1f5;object-fit:contain;padding:0.4rem"></div>
-              <div class="mini-img"><img src="images/pcr-ui.jpg" alt="Preset interface screens running in the Wokwi simulator"></div>
-            </div>
-          </div>
+        <p class="project-desc">A low-cost tabletop PCR system so aged-care staff with no lab training can test for MRSA on site, instead of waiting 1–3 days for an external lab. I owned the firmware and user interface.</p>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-val">11 → 3</div><div class="kpi-lbl">values to re-enter vs knob presses to switch tests</div></div>
+          <div class="kpi"><div class="kpi-val">5 / 5</div><div class="kpi-lbl">interface rating from first-time users</div></div>
+          <div class="kpi"><div class="kpi-val">$190</div><div class="kpi-lbl">materials per unit</div></div>
         </div>
+        <details class="spec">
+          <summary><span class="plus" aria-hidden="true">+</span> Full spec</summary>
+          <div class="spec-rows">
+            <div class="spec-row"><span class="spec-key">Project</span><span class="spec-val">Adapted the open-source GaudiLabs PocketPCR and the Glowscope into one system that detects the MRSA mecA gene, with a vented case, a faster fan and a 3D-printed viewing enclosure.</span></div>
+            <div class="spec-row"><span class="spec-key">My role</span><span class="spec-val">Firmware and user interface (C++ / Arduino on an Adafruit Feather M0)</span></div>
+            <div class="spec-row"><span class="spec-key">Built</span><span class="spec-val">Five saved, nameable PCR presets on a single knob, with their own flash storage so they survive power-off and never overwrite the original settings.</span></div>
+            <div class="spec-row"><span class="spec-key">Safety</span><span class="spec-val">Left all heater, PID and thermistor code byte-identical to the original and confirmed it by direct file comparison, so UI changes could not affect temperature control.</span></div>
+            <div class="spec-row"><span class="spec-key">Testing</span><span class="spec-val">Built an Arduino Uno test rig in the Wokwi simulator and fixed two bugs before touching the real device, then ran a full heating cycle on hardware. Changes tracked in Git.</span></div>
+            <div class="spec-row"><span class="spec-key">Results</span><span class="spec-val">Team run time cut from 640 s to 355 s. All 11 users with no PCR experience ran it on their own and correctly identified positive and negative samples.</span></div>
+            <div class="spec-row"><span class="spec-key">Next</span><span class="spec-val">TGA IVD classification, and quality and risk documentation to ISO 13485, ISO 14971 and ISO 20916.</span></div>
+          </div>
+        </details>
       </div>
     </article>
+  </div>
+</section>
 
-    <!-- UPCOMING -->
-    <div class="soon-row">
-      <div class="soon-card">
-        <span class="soon-label">Coming soon</span>
-        <h4>Project 03</h4>
+<!-- 3.0 CAPABILITY -->
+<section id="capability" class="section reveal">
+  <div class="container">
+    <div class="section-head">
+      <p class="label"><span class="num">3.0</span>Capability</p>
+      <h2>From the <em>standard</em> to the solder joint.</h2>
+    </div>
+    <div class="matrix">
+      <div class="cap feature">
+        <span class="cap-id">3.1</span>
+        <h3>Quality &amp; Regulatory</h3>
+        <ul>
+          <li>ISO 13485 quality systems</li>
+          <li>ISO 14971 risk management (FMEA, RPN)</li>
+          <li>TGA device classification</li>
+          <li>SOPs, work instructions, traceability</li>
+          <li>Inspection and leak testing</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="cap-id">3.2</span>
+        <h3>Laboratory</h3>
+        <ul>
+          <li>Specimen handling and labelling</li>
+          <li>Laboratory information system data entry</li>
+          <li>Equipment set-up and routine checks</li>
+          <li>Safe handling of biohazards</li>
+          <li>Stock control</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="cap-id">3.3</span>
+        <h3>Hardware &amp; PCB</h3>
+        <ul>
+          <li>EasyEDA Pro schematic and layout</li>
+          <li>Gerber export, JLCPCB fabrication</li>
+          <li>Sensor selection</li>
+          <li>Analog signal chain design</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="cap-id">3.4</span>
+        <h3>Firmware &amp; Embedded</h3>
+        <ul>
+          <li>Arduino / C++, state-machine UIs</li>
+          <li>Hardware timer interrupts</li>
+          <li>Flash storage on SAMD21</li>
+          <li>Wokwi simulation, Git</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="cap-id">3.5</span>
+        <h3>CAD &amp; Mechanical</h3>
+        <ul>
+          <li>SolidWorks part modelling</li>
+          <li>Enclosure and tubing design</li>
+          <li>FDM 3D printing and tolerancing</li>
+          <li>FEA</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <span class="cap-id">3.6</span>
+        <h3>Software &amp; Signals</h3>
+        <ul>
+          <li>Python, MATLAB, Flask dashboards</li>
+          <li>FFT, phase-sensitive detection</li>
+          <li>Impedance measurement</li>
+          <li>LTspice simulation</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="reveal">
+<!-- 4.0 REVISION HISTORY -->
+<section id="history" class="section reveal">
   <div class="container">
-    <p class="section-label">03 — Contact</p>
-    <h2>Let's talk.</h2>
-    <p class="contact-sub">Open to medical device engineering and quality roles, especially in ISO 13485 manufacturing.</p>
-    <div class="contact-cards">
-      <a href="mailto:kyawlinnthant55@gmail.com" class="contact-card">
-        <span class="cc-label">Email</span>
-        <span class="cc-value">kyawlinnthant55@gmail.com</span>
-      </a>
-      <a href="https://www.linkedin.com/in/kyaw-linn-thant-ba398a247/" target="_blank" class="contact-card">
-        <span class="cc-label">LinkedIn</span>
-        <span class="cc-value">/in/kyaw-linn-thant</span>
-      </a>
-      <a href="https://github.com/KyawGyi12121212" target="_blank" class="contact-card">
-        <span class="cc-label">GitHub</span>
-        <span class="cc-value">@KyawGyi12121212</span>
-      </a>
+    <div class="section-head">
+      <p class="label"><span class="num">4.0</span>Revision history</p>
+      <h2>Every role, <em>logged</em> like a controlled document.</h2>
     </div>
+    <table class="rev-table">
+      <thead><tr><th scope="col">Rev</th><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
+      <tbody>
+        <tr class="current"><td class="rev">D</td><td class="date">Oct 2026 – now</td><td class="what"><b>Laboratory Assistant, Microbiology · 4Cyte Pathology</b><span>Specimen processing, laboratory information system data entry and QC activities in a regulated pathology lab.</span></td></tr>
+        <tr><td class="rev">C</td><td class="date">2026 · Sem 2</td><td class="what"><b>Firmware &amp; UI · M&amp;M Pocket PCR (UTS)</b><span>Preset system for an MRSA test device. All 11 first-time users ran it on their own.</span></td></tr>
+        <tr><td class="rev">B</td><td class="date">May – Aug 2026</td><td class="what"><b>Biomedical Engineering Team Lead · Optik Consultancy</b><span>Led the hardware build of the forced oscillation device for Royal North Shore Hospital and the Woolcock Institute.</span></td></tr>
+        <tr><td class="rev">A</td><td class="date">2024 · Sem 1</td><td class="what"><b>Biomedical Industry Frameworks · UTS</b><span>Class IIa device taken through TGA classification and an ISO 13485 quality plan, with an ISO 14971 risk assessment.</span></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<footer>
-  <div class="container footer-inner">
-    <span>Kyaw Linn Thant</span>
-    <span>© 2026</span>
+<!-- 5.0 CONTACT -->
+<section id="contact" class="section contact reveal">
+  <div class="container">
+    <p class="label"><span class="num">5.0</span>Contact</p>
+    <h2 style="margin-top:1rem">Let’s <em>talk.</em></h2>
+    <p class="contact-sub">Open to medical device engineering and quality roles, especially in ISO 13485 manufacturing.</p>
+    <div class="contact-list">
+      <a href="mailto:kyawlinnthant55@gmail.com" class="contact-row"><span class="k">Email</span><span class="v">kyawlinnthant55@gmail.com</span><span class="arr" aria-hidden="true">→</span></a>
+      <a href="https://www.linkedin.com/in/kyaw-linn-thant-ba398a247/" target="_blank" rel="noopener" class="contact-row"><span class="k">LinkedIn</span><span class="v">/in/kyaw-linn-thant</span><span class="arr" aria-hidden="true">↗</span></a>
+      <a href="https://github.com/KyawGyi12121212" target="_blank" rel="noopener" class="contact-row"><span class="k">GitHub</span><span class="v">@KyawGyi12121212</span><span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="container">
+    <span>End of document · KLT-PF-001 Rev D</span>
+    <span><a href="letter.html" style="text-decoration:none">Cover letter</a> · © 2026 Kyaw Linn Thant</span>
   </div>
 </footer>
 
 <script>
-// Accordion (skills)
-document.querySelectorAll('.acc-head').forEach(head => {
-  head.addEventListener('click', () => {
-    const item = head.parentElement;
-    item.classList.toggle('open');
+// Theme toggle
+(function () {
+  var btn = document.querySelector('.theme-btn');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var cur = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
   });
-});
-
-// Expandable project panels
-document.querySelectorAll('.expand-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const panel = document.getElementById(btn.dataset.target);
-    const isOpen = panel.classList.toggle('open');
-    btn.classList.toggle('active', isOpen);
-    btn.querySelector('.expand-text').textContent = isOpen ? 'Hide details' : 'View details';
-  });
-});
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-  });
-});
+})();
 
 // Scroll reveal
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (el) { el.classList.add('visible'); }); return; }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { obs.observe(el); });
+})();
 
-// Nav active state
-const secs = document.querySelectorAll('section[id], header[id]');
-const links = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  document.querySelectorAll('section[id]').forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) cur = s.id;
-  });
-  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
-});
+// Active nav link
+(function () {
+  var links = document.querySelectorAll('.nav-links a[href^="#"]');
+  var secs = document.querySelectorAll('main section[id]');
+  window.addEventListener('scroll', function () {
+    var cur = '';
+    secs.forEach(function (s) { if (window.scrollY >= s.offsetTop - 140) cur = s.id; });
+    links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+  }, { passive: true });
+})();
 </script>
-
 </body>
 </html>

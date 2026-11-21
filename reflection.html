@@ -6,28 +6,44 @@
 <title>Reflection — Kyaw Linn Thant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="pages.css">
+<script>
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-name" style="text-decoration:none;color:inherit">KLT<span class="nav-dot">.</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#projects">Work</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="reflection.html" class="active">Reflection</a></li>
-    <li><a href="letter.html">Letter</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
+<div class="doc-strip" aria-hidden="true">
+  <div class="container">
+    <span>KLT-PF-001 · Rev D</span>
+    <span class="hide-sm">Biomedical engineering portfolio</span>
+    <span class="status">Open to quality &amp; engineering roles</span>
+  </div>
+</div>
+
+<nav class="site-nav" aria-label="Main">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">KL</span><span class="brand-text">Kyaw Linn Thant</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#profile">Profile</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#capability">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="reflection.html" class="active" aria-current="page">Reflection</a></li>
+      <li><a href="letter.html">Letter</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="theme-btn" type="button" aria-label="Switch light or dark theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17" /><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+    </button>
+  </div>
 </nav>
 
 <header class="page-header">
   <div class="container">
-    <p class="section-label">Internship Reflection</p>
+    <p class="section-label" data-doc="DOC 1.2">Internship Reflection</p>
     <h1>Reflection.</h1>
   </div>
 </header>
@@ -151,12 +167,26 @@
   </div>
 </main>
 
-<footer>
-  <div class="container footer-inner">
-    <span>Kyaw Linn Thant</span>
-    <span>© 2026</span>
+<footer class="site-foot">
+  <div class="container">
+    <span>End of document · KLT-PF-001 Rev D</span>
+    <span>© 2026 Kyaw Linn Thant</span>
   </div>
 </footer>
+
+<script>
+(function () {
+  var btn = document.querySelector('.theme-btn');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var cur = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
 
 </body>
 </html>
